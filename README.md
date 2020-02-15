@@ -16,5 +16,5 @@ Usage:
 
 Running tests:
 ```
-./resolve test - runs tests
+./resolve test
 ```
