@@ -26,7 +26,7 @@ class ChmodResolverResult
     /**
      * @return bool
      */
-    public function isMatches(): bool
+    public function matches(): bool
     {
         return $this->matches;
     }

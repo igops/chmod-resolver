@@ -46,11 +46,11 @@ class ChmodResolver
         $this->bitExtractor = new BitExtractor();
     }
 
-    public function matches(int $mode, string $who, string $op): ChmodResolverResult
+    public function of(int $mode, string $who, string $op): ChmodResolverResult
     {
         if ($mode < 0) {
             return new ChmodResolverResult(false,
-                sprintf('Invalid mode: non negative integer expected, [%u] given', $mode));
+                sprintf('Invalid mode: non-negative integer expected, [%d] given', $mode));
         }
         if (!in_array($who, [self::WHO_OWNER, self::WHO_GROUP, self::WHO_OTHERS])) {
             return new ChmodResolverResult(false,
